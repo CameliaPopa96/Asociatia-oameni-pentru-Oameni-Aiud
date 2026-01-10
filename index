@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Asociația Oameni pentru Oameni-Aiud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonturi -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stiluri -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #0275d8;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #025aa5;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #01447e; border-radius: 5px; }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 0.6s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    h2 { margin-bottom: 15px; color: #025aa5; }
+
+    .button {
+      background: #e67e22;
+      color: white;
+      display: inline-block;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+    .button:hover { background: #cf711c; }
+
+    .grid { display: grid; gap: 25px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
+
+    footer {
+      background: #025aa5;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 50px;
+    }
+    footer a { color: white; text-decoration: none; font-weight: 600; }
+
+    /* Slider */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: none;
+    }
+    .slider img.active { display: block; }
+
+    /* Galerie foto */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 10px; }
+    .gallery img { width: 100%; border-radius: 6px; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Asociația Oameni pentru Oameni-Aiud</h1>
+  <p>Împreună pentru un viitor mai sănătos și o comunitate unită!</p>
+</header>
+
+<nav>
+  <a href="#despre">Despre</a>
+  <a href="#misiune">Misiune</a>
+  <a href="#proiecte">Proiecte</a>
+  <a href="#echipa">Echipa</a>
+  <a href="#galerie">Galerie</a>
+  <a href="#testimoniale">Păreri</a>
+  <a href="#redirectionare">Redirecționare 3,5%</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="hero">
+  <div class="slider" id="slider">
+    <!-- Înlocuiește cu imaginile tale -->
+    <img src="hero1.jpg" class="active" alt="Activitati ONG">
+    <img src="hero2.jpg" alt="Sprijin comunitar">
+    <img src="hero3.jpg" alt="Evenimente caritabile">
+  </div>
+  <h2>Sprijin pentru Spitalul Municipal Aiud</h2>
+  <p>Ajutăm comunitatea prin proiecte medicale, educative și sociale — implică-te și tu!</p>
+  <a href="#contact" class="button">Contactează-ne</a>
+  <a href="https://www.paypal.com/donate" target="_blank" class="button">Donează Acum</a>
+</section>
+
+<section id="despre">
+  <h2>Despre Noi</h2>
+  <p>Suntem o organizație non-profit dedicată sprijinirii Spitalului Municipal Aiud și comunității locale. Prin proiectele noastre, ne propunem să creăm oportunități de îngrijire medicală, educație și susținere socială pentru toți cetățenii.:contentReference[oaicite:1]{index=1}</p>
+</section>
+
+<section id="misiune">
+  <h2>Misiunea și Impactul</h2>
+  <ul>
+    <li>Susținerea formării profesionale a personalului medical</li>
+    <li>Dotarea spitalului cu echipamente moderne</li>
+    <li>Crearea unor programe comunitare de sănătate</li>
+    <li>Conștientizarea și educarea publicului larg</li>
+  </ul>
+</section>
+
+<section id="proiecte">
+  <h2>Proiectele Noastre</h2>
+  <div class="grid grid-2">
+    <div>
+      <h3>Oncologie de Zi</h3>
+      <p>Proiect destinat pacienților cu nevoi oncologice, pentru îngrijire și consiliere.</p>
+    </div>
+    <div>
+      <h3>Dotări Medicale</h3>
+      <p>Colectăm fonduri pentru aparatură performantă necesară spitalului.</p>
+    </div>
+  </div>
+</section>
+
+<section id="echipa">
+  <h2>Echipa Noastră</h2>
+  <div class="grid grid-2">
+    <div>
+      <strong>Dr. Ana Popescu</strong>
+      <p>Președinte – coordonator proiecte medicale</p>
+    </div>
+    <div>
+      <strong>Ion Ionescu</strong>
+      <p>Vicepreședinte – responsabil voluntari</p>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <h2>Galerie Foto</h2>
+  <div class="gallery">
+    <!-- Înlocuiește cu imaginile tale -->
+    <img src="galerie1.jpg" alt="Eveniment caritabil">
+    <img src="galerie2.jpg" alt="Voluntari ONG">
+    <img src="galerie3.jpg" alt="Sprijin comunitar">
+    <img src="galerie4.jpg" alt="Proiect spital">
+  </div>
+</section>
+
+<section id="testimoniale">
+  <h2>Ce Spun Oamenii</h2>
+  <div class="grid grid-2">
+    <blockquote>„Sprijinul acordat schimbă comunități!” – Maria T.</blockquote>
+    <blockquote>„O echipă dedicată și implicată.” – Dr. L. Ionescu</blockquote>
+  </div>
+</section>
+
+<section id="redirectionare">
+  <h2>Redirecționează 3,5% din impozit</h2>
+  <p>Poți susține Asociația Oameni pentru Oameni-Aiud redirecționând până la <strong>3,5% din impozitul pe venit</strong>, fără costuri suplimentare pentru tine.:contentReference[oaicite:2]{index=2}</p>
+  <a href="https://formular230.ro/asociatia-oameni-pentru-oameni-aiud" target="_blank" class="button">
+    Completează Formularul 230
+  </a>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Numele tău" required>
+    <input type="email" name="email" placeholder="Emailul tău" required>
+    <textarea name="message" rows="5" placeholder="Mesajul tău" required></textarea>
+    <button type="submit" class="button">Trimite Mesajul</button>
+  </form>
+  <p id="status"></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Asociația Oameni pentru Oameni-Aiud</p>
+  <p>
+    Urmărește-ne: 
+    <a href="#" target="_blank">Facebook</a> |
+    <a href="#" target="_blank">Instagram</a>
+  </p>
+</footer>
+
+<!-- Slider Script -->
+<script>
+  let index=0;
+  const slides=document.querySelectorAll('#slider img');
+  setInterval(()=> {
+    slides[index].classList.remove('active');
+    index=(index+1)%slides.length;
+    slides[index].classList.add('active');
+  }, 3500);
+</script>
+
+</body>
+</html>
