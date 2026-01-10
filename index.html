@@ -3,276 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <title>Asociația Oameni pentru Oameni-Aiud</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-/* RESEȚARE ȘI FONTURI */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Roboto', sans-serif; background: #fafafa; color: #333; }
-a { text-decoration: none; }
-
-/* NAVBAR MODERN */
-nav {
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-nav img { height: 45px; }
-nav ul { list-style: none; display: flex; gap: 15px; }
-nav li a {
-  color: #333; font-weight: 500; padding: 8px 12px;
-  transition: .3s all;
-}
-nav li a:hover { background: #0275d8; color: white; border-radius: 5px; }
-
-/* HERO MODERN */
-.hero {
-  background: url('hero-modern.jpg') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-.hero-overlay {
-  background: rgba(0,0,0,0.5);
-  height: 100%; width: 100%; position: absolute; top: 0; left: 0;
-}
-.hero-content {
-  position: relative;
-  max-width: 800px;
-  z-index: 1;
-}
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero p { font-size: 1.2rem; margin-bottom: 20px; }
-.button-primary {
-  background: #e67e22; color: white; padding: 12px 24px;
-  border-radius: 6px; font-weight: bold;
-  transition: .3s background;
-}
-.button-primary:hover { background: #cf711c; }
-
-/* SECȚIUNI & GRID */
-.section { padding: 60px 20px; }
-.container { max-width: 1100px; margin: auto; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 30px; }
-
-/* CARDURI */
-.card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  transition: .3s transform;
-}
-.card img { width: 100%; height: 180px; object-fit: cover; }
-.card-body { padding: 15px; }
-.card-body h3 { margin-bottom: 8px; color: #025aa5; }
-.card:hover { transform: translateY(-5px); }
-
-/* GALLERY MODERNĂ */
-.gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 8px; }
-.gallery img {
-  width: 100%; aspect-ratio: 1/1;
-  object-fit: cover; border-radius: 6px;
-}
-
-/* FOOTER */
-footer {
-  background: #025aa5; color: white;
-  text-align: center; padding: 25px 15px;
-}
-footer a { color: white; font-weight: 600; }
+body { font-family: 'Poppins', sans-serif; background: #f7f7f7; }
+.navbar { background: #28A745; }
+.nav-link { color: white !important; font-weight: 500; }
+.btn-primary { background: #FFC107; border: none; color: #333; }
+.section-title { color: #28A745; margin-bottom: 1rem; }
+.card:hover { transform: translateY(-6px); transition: .3s; }
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav>
-  <img src="logo-aiud.png" alt="logo ONG">
-  <ul>
-    <li><a href="#despre">Despre</a></li>
-    <li><a href="#misiune">Misiune</a></li>
-    <li><a href="#proiecte">Proiecte</a></li>
-    <li><a href="#echipa">Echipa</a></li>
-    <li><a href="#galerie">Galerie</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#redirectionare" class="button-primary">Redirecționează 3.5%</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero"><img src="images/logo.jpg" alt="Logo ONG" style="height:45px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#despre">Despre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#misiune">Misiune</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proiecte">Proiecte</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Evenimente</a></li>
+        <li class="nav-item"><a class="nav-link" href="#echipa">Echipa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content container">
-    <h1>Împreună Susținem Spitalul Municipal Aiud</h1>
-    <p>Proiecte medicale, sociale și comunitare care schimbă vieți!</p>
-    <a href="#contact" class="button-primary">Contactează-ne</a>
-    <a href="https://www.paypal.com/donate" target="_blank" class="button-primary">Donează Acum</a>
+<!-- HERO CAROUSEL -->
+<section id="hero" class="pt-4">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/hero1.jpg" class="d-block w-100" alt="Imagine 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hero2.jpg" class="d-block w-100" alt="Imagine 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/hero3.jpg" class="d-block w-100" alt="Imagine 3">
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-5 bg-light">
+    <h1 class="fw-bold">Împreună pentru o comunitate mai sănătoasă</h1>
+    <p class="lead">Sprijinim sănătatea și proiectele sociale din Aiud.</p>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#donateModal">Donează Acum</button>
   </div>
 </section>
 
 <!-- DESPRE -->
-<section id="despre" class="section container">
-  <h2>Despre Noi</h2>
-  <p>Asociația Oameni pentru Oameni-Aiud este dedicată sprijinirii Spitalului Municipal Aiud prin proiecte medicale inovatoare și susținerea comunității locale.</p>
+<section id="despre" class="py-5 container" data-aos="fade-up">
+  <h2 class="section-title">Despre Noi</h2>
+  <p>Asociația Oameni pentru Oameni-Aiud sprijină dezvoltarea comunității prin proiecte medicale, educaționale și sociale.</p>
 </section>
 
 <!-- MISIUNE -->
-<section id="misiune" class="section container">
-  <h2>Misiunea Noastră</h2>
-  <ul>
-    <li>Deschiderea Spitalizarii de zi- Oncologie</li>
-    <li>Dotarea spitalului cu echipamente moderne</li>
-    <li>Sprijin pentru profesioniștii din sănătate</li>
-    <li>Programe educative pentru pacienți și familie</li>
-    <li>Impact social durabil</li>
-  </ul>
+<section id="misiune" class="py-5 bg-white" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Misiunea Noastră</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Susținerea serviciilor medicale</li>
+      <li class="list-group-item">Dotarea spitalului</li>
+      <li class="list-group-item">Programe educaționale pentru sănătate</li>
+      <li class="list-group-item">Consolidarea solidarității comunitare</li>
+    </ul>
+  </div>
 </section>
 
 <!-- PROIECTE -->
-<section id="proiecte" class="section container">
-  <h2>Proiecte Importante</h2>
-  <div class="grid-3">
-    <div class="card">
-      <img src="oncologie-proiect.jpg" alt="Proiect Oncologie">
-      <div class="card-body">
-        <h3>Oncologie de Zi</h3>
-        <p>Sprijin specializat pentru pacienții cu nevoi oncologice.</p>
+<section id="proiecte" class="py-5 container" data-aos="fade-up">
+  <h2 class="section-title">Proiecte</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/proj1.jpg" class="card-img-top" alt="Proiect 1">
+        <div class="card-body">
+          <h5 class="card-title text-success">Oncologie de Zi</h5>
+          <p class="card-text">Sprijin direct pentru pacienții oncologici.</p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img src="echipamente-spital.jpg" alt="Echipamente Spital">
-      <div class="card-body">
-        <h3>Dotări Medicale</h3>
-        <p>Colectăm fonduri pentru aparatură modernă.</p>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/proj2.jpg" class="card-img-top" alt="Proiect 2">
+        <div class="card-body">
+          <h5 class="card-title text-success">Dotări Medicale</h5>
+          <p class="card-text">Colectăm fonduri pentru aparatură modernă.</p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <img src="educatie-comunitate.jpg" alt="Educație Comunitate">
-      <div class="card-body">
-        <h3>Educație pentru Sănătate</h3>
-        <p>Campanii de informare și educație pentru sănătate.</p>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/proj3.jpg" class="card-img-top" alt="Proiect 3">
+        <div class="card-body">
+          <h5 class="card-title text-success">Educație Sănătate</h5>
+          <p class="card-text">Materiale și cursuri de prevenție.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENIMENTE / ACTIUNI -->
+<section id="events" class="py-5 bg-white" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Evenimente & Acțiuni</h2>
+    <div class="list-group">
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5>Ziua Sănătății – 25 Mai 2025</h5>
+          <p>Screening gratuit și consiliere medicală.</p>
+        </div>
+        <span class="badge bg-success">Participă</span>
+      </div>
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5>Voluntariat în spital – 3 Iunie 2025</h5>
+          <p>Sesiune de sprijin și socializare.</p>
+        </div>
+        <span class="badge bg-success">Participă</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ECHIPA -->
-<section id="echipa" class="section container">
-  <h2>Echipa Noastră</h2>
-  <div class="grid-3">
-    <div class="card">
-      <img src="ana-popescu.jpg" alt="farm. Camelia-Maria Popa">
-      <div class="card-body">
-        <h3>Farm. Camelia-Maria Popa- Farmacist specialist Farmacie clinica</h3>
-        <p>Președinte</p>
-      </div>
+<section id="echipa" class="py-5 container" data-aos="fade-up">
+  <h2 class="section-title">Echipa Noastră</h2>
+  <div class="row g-4 text-center">
+    <div class="col-md-4">
+      <img src="images/ana-popescu.jpg" class="rounded-circle mb-2" alt="Ana" width="100">
+      <h5>Dr. Ana Popescu</h5>
+      <p>Președinte</p>
     </div>
-    <div class="card">
-      <img src="ion-ionescu.jpg" alt="Dr. Raluca-Ana Stanciu">
-      <div class="card-body">
-        <h3>Dr. Raluca-Ana Stanciu- Medic specialist Oncologie medicala, Doctor in Stiinte Medicale</h3>
-        <p>Vicepreședinte</p>
-      </div>
-         <div class="card">
-      <img src="ion-ionescu.jpg" alt="Corina-Dalia Tordai">
-      <div class="card-body">
-        <h3>Corina-Dalia Tordai</h3>
-        <p>Secretar</p>
-      </div>
-            <div class="card">
-      <img src="ion-ionescu.jpg" alt="Dr. Alina Jeler">
-      <div class="card-body">
-        <h3>Dr. Alina Jeler- Medic specialist Anestezie si Terapie Intensiva</h3>
-        <p>Membru fondator</p>
-      </div>
-                <div class="card">
-      <img src="ion-ionescu.jpg" alt="Dr. Daniel-Eugen Boc">
-      <div class="card-body">
-        <h3>Dr. Daniel-Eugen Boc- Medic specialist Anestezie si Terapie Intensiva</h3>
-        <p>Membru fondator</p>
-             <div class="card">
-      <img src="ion-ionescu.jpg" alt="Dr. Adriana Mitric">
-      <div class="card-body">
-        <h3>Dr. Adriana Mitric- Medic specialist Boli infectioase</h3>
-        <p>Membru fondator</p>
-             <div class="card">
-      <img src="ion-ionescu.jpg" alt="Ec. Liliana Homana">
-      <div class="card-body">
-        <h3>Ec. Liliana Homana</h3>
-        <p>Membru fondator</p>
-             <div class="card">
-      <img src="ion-ionescu.jpg" alt="Maria-Paula Clamba">
-      <div class="card-body">
-        <h3>Maria-Paula Clamba - Asistent medical</h3>
-        <p>Membru fondator</p>
-             <div class="card">
-      <img src="ion-ionescu.jpg" alt="Alexandra-Maria Farago">
-      <div class="card-body">
-        <h3>Alexandra-Maria Farago - Asistent medical</h3>
-        <p>Membru fondator</p>
-      </div>
-                    <div class="card">
-      <img src="ion-ionescu.jpg" alt="Andreea-Teodora Ivascu">
-      <div class="card-body">
-        <h3>Andreea-Teodora Ivascu - Asistent de farmacie</h3>
-        <p>Membru fondator</p>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
+    <div class="col-md-4">
+      <img src="images/ion-ionescu.jpg" class="rounded-circle mb-2" alt="Ion" width="100">
+      <h5>Ion Ionescu</h5>
+      <p>Coordonator Voluntari</p>
     </div>
   </div>
 </section>
 
-<!-- GALERIE FOTO -->
-<section id="galerie" class="section container">
-  <h2>Galerie Foto</h2>
-  <div class="gallery">
-    <img src="galerie1.jpg" alt="Eveniment ONG">
-    <img src="galerie2.jpg" alt="Voluntari">
-    <img src="galerie3.jpg" alt="Sprijin comunitar">
-    <img src="galerie4.jpg" alt="Proiect spital">
+<!-- GALERIE -->
+<section id="galerie" class="py-5 bg-white" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Galerie Foto</h2>
+    <div class="row g-3">
+      <div class="col-3"><img src="images/gal1.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col-3"><img src="images/gal2.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col-3"><img src="images/gal3.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col-3"><img src="images/gal4.jpg" class="img-fluid rounded" alt=""></div>
+    </div>
   </div>
 </section>
 
-<!-- REDIRECȚIONARE 3,5% -->
-<section id="redirectionare" class="section container">
-  <h2>Redirecționează 3,5% din impozit</h2>
-  <p>Susține activitatea noastră fără costuri suplimentare prin redirecționarea a până la 3,5% din impozitul pe venit către Asociația Oameni pentru Oameni-Aiud.</p>
-  <a href="https://formular230.ro/asociatia-oameni-pentru-oameni-aiud" target="_blank" class="button-primary">
-    Completează Formularul 230
-  </a>
+<!-- REDIRECȚIONARE -->
+<section id="redirectionare" class="py-5 container text-center" data-aos="fade-up">
+  <h2 class="section-title">Redirecționează 3,5%</h2>
+  <p>Susține activitatea noastră fără costuri suplimentare!</p>
+  <a href="https://formular230.ro/asociatia-oameni-pentru-oameni-aiud" target="_blank" class="btn btn-primary">Completează Formularul 230</a>
+</section>
+
+<!-- NEWSLETTER --> 
+<section id="newsletter" class="py-5 bg-white" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">Abonează-te la Newsletter</h2>
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-6"><input type="email" class="form-control" placeholder="Emailul tău"></div>
+      <div class="col-md-2"><button type="submit" class="btn btn-primary w-100">Abonează-te</button></div>
+    </form>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section container">
-  <h2>Contact</h2>
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="Numele tău" required>
-    <input type="email" name="email" placeholder="Emailul tău" required>
-    <textarea name="message" rows="5" placeholder="Mesajul tău" required></textarea>
-    <button type="submit" class="button-primary">Trimite Mesajul</button>
+<section id="contact" class="py-5 container" data-aos="fade-up">
+  <h2 class="section-title text-center">Contact</h2>
+  <form class="row g-3">
+    <div class="col-md-6"><input type="text" class="form-control" placeholder="Numele tău"></div>
+    <div class="col-md-6"><input type="email" class="form-control" placeholder="Emailul tău"></div>
+    <div class="col-12"><textarea class="form-control" rows="4" placeholder="Mesajul tău…"></textarea></div>
+    <div class="col-12 text-center"><button class="btn btn-primary px-4">Trimite Mesajul</button></div>
   </form>
-  <p id="status"></p>
 </section>
 
+<!-- DONATE MODAL -->
+<div class="modal fade" id="donateModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Donează pentru cauză</h5>
+    <button class="btn-close" data-bs-dismiss="modal"></button>
+  </div>
+  <div class="modal-body text-center">
+    <p>Alege metoda de donație:</p>
+    <a href="https://www.paypal.com/donate" target="_blank" class="btn btn-primary mb-2 px-4">Paypal</a>
+    <button class="btn btn-primary px-4">Stripe</button>
+  </div>
+</div>
+</div>
+</div>
+
 <!-- FOOTER -->
-<footer>
+<footer class="py-4 text-center bg-dark text-white">
   <p>&copy; 2025 Asociația Oameni pentru Oameni-Aiud</p>
-  <p>Urmărește-ne: <a href="#" target="_blank">Facebook</a> | <a href="#" target="_blank">Instagram</a></p>
+  <p><a href="#" class="text-white"><i class="bi bi-facebook"></i> Facebook</a> | <a href="#" class="text-white"><i class="bi bi-instagram"></i> Instagram</a></p>
 </footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 
 </body>
 </html>
-
 
