@@ -4,23 +4,21 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
     Asociația Oameni pentru Oameni - Aiud
   </title>
 
   <meta name="description"
-        content="Asociația Oameni pentru Oameni - Aiud susține dezvoltarea Spitalului Municipal Aiud și sprijină pacienții oncologici prin proiecte medicale și sociale.">
+        content="Asociația Oameni pentru Oameni - Aiud sprijină dezvoltarea Spitalului Municipal Aiud și pacienții oncologici.">
 
   <meta name="keywords"
-        content="ONG Aiud, oncologie Aiud, donații Aiud, formular 230, redirecționare impozit">
+        content="ONG Aiud, oncologie Aiud, Spital Municipal Aiud, donații, sănătate">
 
   <!-- GOOGLE FONTS -->
 
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preconnect"
         href="https://fonts.gstatic.com"
@@ -53,11 +51,10 @@
 
     :root{
 
-      --primary:#111827;
-      --secondary:#d4a373;
-      --light:#f9fafb;
-      --white:#ffffff;
-      --gray:#6b7280;
+      --primary:#198754;
+      --secondary:#ffc107;
+      --dark:#1f2937;
+      --light:#f8f9fa;
 
     }
 
@@ -78,8 +75,8 @@
     body{
 
       font-family:'Poppins',sans-serif;
-      background:var(--light);
-      color:#222;
+      background:#f7f7f7;
+      color:#333;
       overflow-x:hidden;
 
     }
@@ -88,29 +85,28 @@
 
     .navbar{
 
-      background:rgba(17,24,39,.92);
-
+      background:rgba(25,135,84,.96);
       backdrop-filter:blur(10px);
 
-      padding:15px 0;
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
 
-      transition:.3s;
+      padding:12px 0;
 
     }
 
     .navbar-brand img{
 
       height:55px;
+      object-fit:contain;
 
     }
 
     .navbar-nav .nav-link{
 
       color:white !important;
-
-      margin-left:14px;
-
       font-weight:500;
+
+      margin-left:10px;
 
       transition:.3s;
 
@@ -127,10 +123,9 @@
     .carousel-item img{
 
       height:100vh;
-
       object-fit:cover;
 
-      filter:brightness(40%);
+      filter:brightness(45%);
 
     }
 
@@ -143,7 +138,7 @@
 
       transform:translate(-50%,-50%);
 
-      z-index:10;
+      z-index:5;
 
       width:90%;
 
@@ -155,13 +150,10 @@
 
     .hero-overlay h1{
 
-      font-size:4.5rem;
-
+      font-size:4rem;
       font-weight:700;
 
       margin-bottom:20px;
-
-      line-height:1.1;
 
     }
 
@@ -169,9 +161,7 @@
 
       font-size:1.3rem;
 
-      max-width:800px;
-
-      margin:auto auto 35px;
+      margin-bottom:35px;
 
     }
 
@@ -179,21 +169,21 @@
 
       background:var(--secondary);
 
-      color:#111;
+      color:#333;
 
-      padding:15px 34px;
+      border:none;
 
       border-radius:50px;
+
+      padding:15px 34px;
 
       font-weight:600;
 
       text-decoration:none;
 
-      transition:.35s;
+      transition:.3s;
 
       display:inline-block;
-
-      border:none;
 
     }
 
@@ -201,29 +191,27 @@
 
       transform:translateY(-4px);
 
-      background:#e2b98e;
+      background:#ffd24d;
 
-      color:#111;
+      color:#333;
 
     }
 
     /* IMPACT */
 
-    .impact{
+    .impact-section{
 
-      background:#111827;
+      background:var(--dark);
 
       color:white;
 
     }
 
-    .impact h2{
+    .impact-section h2{
 
       font-size:3rem;
 
       font-weight:700;
-
-      margin-bottom:10px;
 
       color:var(--secondary);
 
@@ -233,33 +221,30 @@
 
     section{
 
-      padding:110px 0;
+      padding:100px 0;
 
     }
 
     .section-title{
 
-      font-size:2.8rem;
-
+      font-size:2.5rem;
       font-weight:700;
-
-      text-align:center;
 
       color:var(--primary);
 
       margin-bottom:15px;
 
+      text-align:center;
+
     }
 
     .section-subtitle{
 
+      color:#666;
+
       text-align:center;
 
-      color:var(--gray);
-
-      max-width:700px;
-
-      margin:0 auto 60px;
+      margin-bottom:60px;
 
     }
 
@@ -269,11 +254,11 @@
 
       border:none;
 
-      border-radius:24px;
+      border-radius:22px;
 
       overflow:hidden;
 
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
 
       transition:.35s;
 
@@ -283,7 +268,7 @@
 
     .card:hover{
 
-      transform:translateY(-10px);
+      transform:translateY(-8px);
 
     }
 
@@ -297,21 +282,70 @@
 
     .card-body{
 
-      padding:30px;
+      padding:28px;
 
     }
 
-    /* BOXES */
+    /* MISSION */
 
-    .glass-box{
+    .mission-box{
 
       background:white;
 
-      border-radius:28px;
+      border-radius:22px;
 
-      padding:50px;
+      padding:45px;
 
-      box-shadow:0 10px 30px rgba(0,0,0,.07);
+      box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    }
+
+    .mission-box li{
+
+      margin-bottom:18px;
+
+      font-size:1.05rem;
+
+    }
+
+    /* TEAM */
+
+    .team-member{
+
+      background:white;
+
+      border-radius:22px;
+
+      padding:35px;
+
+      text-align:center;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+      transition:.3s;
+
+      height:100%;
+
+    }
+
+    .team-member:hover{
+
+      transform:translateY(-6px);
+
+    }
+
+    .team-member img{
+
+      width:130px;
+      height:130px;
+
+      border-radius:50%;
+
+      object-fit:cover;
+
+      border:4px solid var(--primary);
+
+      margin-bottom:20px;
 
     }
 
@@ -320,13 +354,15 @@
     .gallery-img{
 
       width:100%;
-      height:260px;
+      height:250px;
 
       object-fit:cover;
 
-      border-radius:20px;
+      border-radius:18px;
 
       transition:.35s;
+
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
 
     }
 
@@ -334,17 +370,87 @@
 
       transform:scale(1.03);
 
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    }
+
+    /* PARTNERS */
+
+    .partner-logo{
+
+      max-height:90px;
+
+      object-fit:contain;
+
+      filter:grayscale(100%);
+
+      opacity:.8;
+
+      transition:.35s;
+
+    }
+
+    .partner-logo:hover{
+
+      filter:grayscale(0);
+
+      opacity:1;
+
+      transform:scale(1.06);
+
+    }
+
+    /* DONATION */
+
+    .donation-card{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:50px;
+
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+
+      background:white;
+
+      padding:50px;
+
+      border-radius:25px;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    }
+
+    .form-control{
+
+      border-radius:14px;
+
+      padding:14px;
+
+    }
+
+    textarea{
+
+      resize:none;
+
     }
 
     /* FOOTER */
 
     footer{
 
-      background:#111827;
+      background:var(--dark);
 
       color:white;
 
-      padding:60px 0;
+      padding:50px 0;
 
     }
 
@@ -352,7 +458,9 @@
 
       color:white;
 
-      margin:0 10px;
+      text-decoration:none;
+
+      margin:0 12px;
 
       transition:.3s;
 
@@ -364,7 +472,7 @@
 
     }
 
-    /* FLOAT BUTTON */
+    /* DONATE FLOAT */
 
     .floating-donate{
 
@@ -377,11 +485,11 @@
 
       border-radius:50px;
 
-      padding:14px 24px;
+      padding:14px 22px;
 
       font-weight:600;
 
-      box-shadow:0 10px 25px rgba(0,0,0,.2);
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
 
     }
 
@@ -391,7 +499,7 @@
 
       .hero-overlay h1{
 
-        font-size:2.4rem;
+        font-size:2.3rem;
 
       }
 
@@ -403,7 +511,7 @@
 
       .carousel-item img{
 
-        height:85vh;
+        height:80vh;
 
       }
 
@@ -413,7 +521,8 @@
 
       }
 
-      .glass-box{
+      .contact-box,
+      .donation-card{
 
         padding:30px;
 
@@ -437,11 +546,11 @@
        href="#">
 
       <img src="logo.jpg"
-           alt="Logo">
+           alt="Logo ONG">
 
       <span class="ms-3 fw-semibold text-white">
 
-        Oameni pentru Oameni - Aiud
+        Asociația Oameni pentru Oameni - Aiud
 
       </span>
 
@@ -466,11 +575,19 @@
         </li>
 
         <li class="nav-item">
+          <a class="nav-link" href="#misiune">Misiune</a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" href="#proiecte">Proiecte</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#redirect">3.5% / 20%</a>
+          <a class="nav-link" href="#evenimente">Evenimente</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#parteneri">Parteneri</a>
         </li>
 
         <li class="nav-item">
@@ -478,7 +595,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#donatii">Donează</a>
+          <a class="nav-link" href="#redirect">3.5% / 20%</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#donatii">Donații</a>
         </li>
 
         <li class="nav-item">
@@ -507,7 +628,7 @@
 
         <img src="images/hero1.jpg"
              class="d-block w-100"
-             alt="Hero">
+             alt="Hero 1">
 
       </div>
 
@@ -515,7 +636,15 @@
 
         <img src="images/hero2.jpg"
              class="d-block w-100"
-             alt="Hero">
+             alt="Hero 2">
+
+      </div>
+
+      <div class="carousel-item">
+
+        <img src="images/hero3.jpg"
+             class="d-block w-100"
+             alt="Hero 3">
 
       </div>
 
@@ -532,7 +661,7 @@
       <p data-aos="fade-up"
          data-aos-delay="150">
 
-        Împreună construim speranță pentru pacienții oncologici și susținem dezvoltarea Spitalului Municipal Aiud.
+        Susținem Spitalul Municipal Aiud și pacienții, prin proiecte medicale și implicare comunitară.
 
       </p>
 
@@ -553,13 +682,14 @@
 
 <!-- IMPACT -->
 
-<section class="impact">
+<section class="impact-section text-center">
 
-  <div class="container text-center">
+  <div class="container">
 
     <div class="row">
 
-      <div class="col-md-4 py-4">
+      <div class="col-md-4 py-4"
+           data-aos="fade-up">
 
         <h2>1000+</h2>
 
@@ -567,19 +697,23 @@
 
       </div>
 
-      <div class="col-md-4 py-4">
+      <div class="col-md-4 py-4"
+           data-aos="fade-up"
+           data-aos-delay="150">
 
         <h2>2025</h2>
 
-        <p>Începerea proiectului oncologic</p>
+        <p>Lansarea proiectului spitalizarii de zi-oncologie</p>
 
       </div>
 
-      <div class="col-md-4 py-4">
+      <div class="col-md-4 py-4"
+           data-aos="fade-up"
+           data-aos-delay="300">
 
         <h2>Împreună</h2>
 
-        <p>Construim speranță pentru Aiud</p>
+        <p>Construim speranță pentru Spitalul Municipal Aiud</p>
 
       </div>
 
@@ -588,616 +722,3 @@
   </div>
 
 </section>
-
-<!-- DESPRE -->
-
-<section id="despre">
-
-  <div class="container">
-
-    <h2 class="section-title"
-        data-aos="fade-up">
-
-      Despre Noi
-
-    </h2>
-
-    <p class="section-subtitle"
-       data-aos="fade-up">
-
-      O comunitate unită pentru sănătate, speranță și sprijin real.
-
-    </p>
-
-    <div class="row align-items-center g-5">
-
-      <div class="col-lg-6"
-           data-aos="fade-right">
-
-        <img src="images/about.jpg"
-             class="img-fluid rounded-5 shadow"
-             alt="Despre noi">
-
-      </div>
-
-      <div class="col-lg-6"
-           data-aos="fade-left">
-
-        <p class="mb-4">
-
-          Asociația Oameni pentru Oameni - Aiud a fost creată din dorința de a oferi sprijin real pacienților și comunității locale.
-
-        </p>
-
-        <p class="mb-4">
-
-          Credem că accesul la tratamente moderne și servicii medicale de calitate trebuie să fie o normalitate.
-
-        </p>
-
-        <p>
-
-          Prin solidaritate, implicare și transparență, construim proiecte medicale care schimbă vieți.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PROIECTE -->
-
-<section id="proiecte"
-         class="bg-white">
-
-  <div class="container">
-
-    <h2 class="section-title">
-
-      Proiectele Noastre
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Investim în sănătate și în viitorul comunității.
-
-    </p>
-
-    <div class="row g-4">
-
-      <div class="col-lg-4">
-
-        <div class="card">
-
-          <img src="images/proj1.jpg"
-               alt="Oncologie">
-
-          <div class="card-body">
-
-            <h4 class="mb-3">
-
-              Secția de Oncologie
-
-            </h4>
-
-            <p>
-
-              Dezvoltarea unui centru modern de spitalizare de zi pentru pacienții oncologici.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-4">
-
-        <div class="card">
-
-          <img src="images/proj2.jpg"
-               alt="Echipamente">
-
-          <div class="card-body">
-
-            <h4 class="mb-3">
-
-              Dotări Medicale
-
-            </h4>
-
-            <p>
-
-              Echipamente moderne pentru creșterea calității actului medical.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-4">
-
-        <div class="card">
-
-          <img src="images/proj3.jpg"
-               alt="Prevenție">
-
-          <div class="card-body">
-
-            <h4 class="mb-3">
-
-              Educație și Prevenție
-
-            </h4>
-
-            <p>
-
-              Campanii de informare și prevenție pentru comunitatea locală.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- REDIRECT -->
-
-<section id="redirect">
-
-  <div class="container">
-
-    <h2 class="section-title">
-
-      Redirecționează 3.5% / 20%
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Poți ajuta fără niciun cost suplimentar.
-
-    </p>
-
-    <div class="glass-box">
-
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-6">
-
-          <img src="images/tax.jpg"
-               class="img-fluid rounded-5 shadow"
-               alt="230">
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <h3 class="mb-4">
-
-            Susține proiectele medicale din Aiud
-
-          </h3>
-
-          <p class="mb-4">
-
-            Poți redirecționa gratuit 3.5% din impozitul pe venit sau 20% din impozitul pe profit către Asociația Oameni pentru Oameni - Aiud.
-
-          </p>
-
-          <p class="mb-4">
-
-            Alegi unde merge o parte din taxele deja plătite către stat.
-
-          </p>
-
-          <div class="d-grid gap-3">
-
-            <a href="formular230.pdf"
-               target="_blank"
-               class="btn btn-dark btn-lg rounded-pill">
-
-               <i class="bi bi-download"></i>
-               Descarcă Formularul 230
-
-            </a>
-
-            <a href="mailto:oamenipentruoameniaiud@gmail.com"
-               class="btn btn-outline-dark btn-lg rounded-pill">
-
-               <i class="bi bi-envelope"></i>
-               Trimite Formularul
-
-            </a>
-
-          </div>
-
-          <div class="mt-5">
-
-            <h5 class="mb-3">
-
-              Ești companie?
-
-            </h5>
-
-            <p class="mb-4">
-
-              Companiile pot redirecționa 20% din impozitul pe profit și pot deveni parteneri ai proiectelor noastre medicale.
-
-            </p>
-
-            <a href="#contact"
-               class="btn-main">
-
-               Devino Partener
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- DONATII -->
-
-<section id="donatii"
-         class="bg-white">
-
-  <div class="container">
-
-    <h2 class="section-title">
-
-      Donează
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Fiecare donație înseamnă sprijin, tratament și speranță.
-
-    </p>
-
-    <div class="row justify-content-center">
-
-      <div class="col-lg-8">
-
-        <div class="glass-box text-center">
-
-          <i class="bi bi-heart-fill text-danger"
-             style="font-size:65px;"></i>
-
-          <h3 class="mt-4 mb-5">
-
-            Donație prin transfer bancar
-
-          </h3>
-
-          <div class="bg-light rounded-5 p-4">
-
-            <p class="mb-4">
-
-              <small class="d-block text-muted">
-                Beneficiar
-              </small>
-
-              <strong>
-                Asociația Oameni pentru Oameni - Aiud
-              </strong>
-
-            </p>
-
-            <p class="mb-4">
-
-              <small class="d-block text-muted">
-                Bancă
-              </small>
-
-              <strong>
-                Raiffeisen Bank
-              </strong>
-
-            </p>
-
-            <p>
-
-              <small class="d-block text-muted">
-                IBAN
-              </small>
-
-              <strong id="ibanText"
-                      class="fs-4">
-
-                RO28 RZBR 0000 0600 2841 3323
-
-              </strong>
-
-            </p>
-
-            <button class="btn btn-dark rounded-pill px-4 mt-4"
-                    onclick="copyIBAN()">
-
-              <i class="bi bi-copy"></i>
-              Copiază IBAN
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALERIE -->
-
-<section id="galerie">
-
-  <div class="container">
-
-    <h2 class="section-title">
-
-      Galerie
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Momente și proiecte din activitatea noastră.
-
-    </p>
-
-    <div class="row g-4">
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="images/gal1.jpg"
-           class="glightbox">
-
-          <img src="images/gal1.jpg"
-               class="gallery-img"
-               alt="Galerie">
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="images/gal2.jpg"
-           class="glightbox">
-
-          <img src="images/gal2.jpg"
-               class="gallery-img"
-               alt="Galerie">
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="images/gal3.jpg"
-           class="glightbox">
-
-          <img src="images/gal3.jpg"
-               class="gallery-img"
-               alt="Galerie">
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="images/gal4.jpg"
-           class="glightbox">
-
-          <img src="images/gal4.jpg"
-               class="gallery-img"
-               alt="Galerie">
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact"
-         class="bg-white">
-
-  <div class="container">
-
-    <h2 class="section-title">
-
-      Contact
-
-    </h2>
-
-    <div class="glass-box">
-
-      <form action="https://formsubmit.co/oamenipentruoameniaiud@gmail.com"
-            method="POST">
-
-        <div class="row g-4">
-
-          <div class="col-md-6">
-
-            <input type="text"
-                   class="form-control"
-                   placeholder="Numele tău"
-                   required>
-
-          </div>
-
-          <div class="col-md-6">
-
-            <input type="email"
-                   class="form-control"
-                   placeholder="Emailul tău"
-                   required>
-
-          </div>
-
-          <div class="col-12">
-
-            <textarea class="form-control"
-                      rows="5"
-                      placeholder="Mesajul tău"
-                      required></textarea>
-
-          </div>
-
-          <div class="col-12 text-center">
-
-            <button class="btn-main">
-
-              Trimite Mesajul
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container text-center">
-
-    <h4 class="mb-3">
-
-      Asociația Oameni pentru Oameni - Aiud
-
-    </h4>
-
-    <p class="mb-4">
-
-      Împreună construim speranță.
-
-    </p>
-
-    <div class="mb-4">
-
-      <a href="#">
-        <i class="bi bi-facebook"></i>
-      </a>
-
-      <a href="#">
-        <i class="bi bi-instagram"></i>
-      </a>
-
-      <a href="#">
-        <i class="bi bi-linkedin"></i>
-      </a>
-
-    </div>
-
-    <p>
-
-      oamenipentruoameniaiud@gmail.com
-
-    </p>
-
-    <p class="mb-0">
-
-      © 2026 Toate drepturile rezervate
-
-    </p>
-
-  </div>
-
-</footer>
-
-<!-- FLOAT BUTTON -->
-
-<a href="#donatii"
-   class="btn btn-warning floating-donate">
-
-   <i class="bi bi-heart-fill"></i>
-   Donează
-
-</a>
-
-<!-- SCRIPTS -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-<script>
-
-AOS.init({
-
-  duration:900,
-  once:true
-
-});
-
-const lightbox = GLightbox({
-
-  touchNavigation:true,
-  loop:true
-
-});
-
-function copyIBAN(){
-
-  const iban =
-  "RO28 RZBR 0000 0600 2841 3323";
-
-  navigator.clipboard.writeText(iban);
-
-  alert("IBAN copiat cu succes!");
-
-}
-
-</script>
-
-</body>
-
-</html>
