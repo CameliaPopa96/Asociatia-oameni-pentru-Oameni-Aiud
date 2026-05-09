@@ -1,257 +1,477 @@
+```html
 <!DOCTYPE html>
 <html lang="ro">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Asociația Oameni pentru Oameni - Aiud</title>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Asociația Oameni pentru Oameni - Aiud
+  </title>
 
   <meta name="description"
-        content="Asociația Oameni pentru Oameni Aiud sprijină dezvoltarea Spitalului Municipal Aiud și proiectele dedicate pacienților oncologici." />
+        content="Asociația Oameni pentru Oameni - Aiud sprijină dezvoltarea Spitalului Municipal Aiud și pacienții oncologici.">
 
   <meta name="keywords"
-        content="ONG Aiud, Spital Municipal Aiud, oncologie Aiud, donații spital, asociație Aiud" />
+        content="ONG Aiud, oncologie Aiud, Spital Municipal Aiud, donații, sănătate">
 
-  <!-- Google Fonts -->
+  <!-- GOOGLE FONTS -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- BOOTSTRAP -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
 
   <!-- AOS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        rel="stylesheet">
+
+  <!-- GLIGHTBOX -->
+
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+        rel="stylesheet">
 
   <style>
 
     :root{
+
       --primary:#198754;
       --secondary:#ffc107;
       --dark:#1f2937;
       --light:#f8f9fa;
+
     }
 
     *{
+
       margin:0;
       padding:0;
       box-sizing:border-box;
+
+    }
+
+    html{
+
+      scroll-behavior:smooth;
+
     }
 
     body{
+
       font-family:'Poppins',sans-serif;
       background:#f7f7f7;
       color:#333;
-      scroll-behavior:smooth;
+      overflow-x:hidden;
+
     }
 
     /* NAVBAR */
 
     .navbar{
-      background:rgba(25,135,84,0.96);
-      backdrop-filter:blur(8px);
+
+      background:rgba(25,135,84,.96);
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
+
       padding:12px 0;
-      box-shadow:0 2px 10px rgba(0,0,0,.1);
+
     }
 
     .navbar-brand img{
-      height:52px;
+
+      height:55px;
       object-fit:contain;
+
     }
 
     .navbar-nav .nav-link{
-      color:#fff !important;
+
+      color:white !important;
       font-weight:500;
+
       margin-left:10px;
+
       transition:.3s;
+
     }
 
     .navbar-nav .nav-link:hover{
+
       color:var(--secondary) !important;
+
     }
 
     /* HERO */
 
     .carousel-item img{
-      height:85vh;
+
+      height:100vh;
       object-fit:cover;
-      filter:brightness(55%);
+
+      filter:brightness(45%);
+
     }
 
     .hero-overlay{
+
       position:absolute;
+
       top:50%;
       left:50%;
+
       transform:translate(-50%,-50%);
-      z-index:10;
-      text-align:center;
-      color:white;
+
+      z-index:5;
+
       width:90%;
+
+      text-align:center;
+
+      color:white;
+
     }
 
     .hero-overlay h1{
-      font-size:3.5rem;
+
+      font-size:4rem;
       font-weight:700;
+
       margin-bottom:20px;
+
     }
 
     .hero-overlay p{
+
       font-size:1.3rem;
-      margin-bottom:30px;
+
+      margin-bottom:35px;
+
     }
 
     .btn-main{
+
       background:var(--secondary);
+
       color:#333;
-      padding:14px 32px;
+
       border:none;
+
       border-radius:50px;
+
+      padding:15px 34px;
+
       font-weight:600;
-      transition:.3s;
+
       text-decoration:none;
+
+      transition:.3s;
+
       display:inline-block;
+
     }
 
     .btn-main:hover{
-      transform:translateY(-3px);
-      background:#ffca2c;
+
+      transform:translateY(-4px);
+
+      background:#ffd24d;
+
+      color:#333;
+
     }
 
     /* GENERAL */
 
     section{
-      padding:90px 0;
+
+      padding:100px 0;
+
     }
 
     .section-title{
-      font-size:2.2rem;
+
+      font-size:2.5rem;
       font-weight:700;
+
       color:var(--primary);
-      margin-bottom:20px;
+
+      margin-bottom:15px;
+
       text-align:center;
+
     }
 
     .section-subtitle{
-      text-align:center;
+
       color:#666;
-      margin-bottom:50px;
+
+      text-align:center;
+
+      margin-bottom:60px;
+
     }
 
     /* CARDS */
 
     .card{
+
       border:none;
-      border-radius:20px;
+
+      border-radius:22px;
+
       overflow:hidden;
+
       box-shadow:0 8px 25px rgba(0,0,0,.08);
+
       transition:.35s;
+
       height:100%;
+
     }
 
     .card:hover{
+
       transform:translateY(-8px);
+
     }
 
     .card img{
+
       height:240px;
+
       object-fit:cover;
+
     }
 
     .card-body{
-      padding:25px;
+
+      padding:28px;
+
     }
 
     /* MISSION */
 
     .mission-box{
+
       background:white;
-      border-radius:20px;
-      padding:40px;
-      box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+      border-radius:22px;
+
+      padding:45px;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.06);
+
     }
 
     .mission-box li{
-      margin-bottom:15px;
+
+      margin-bottom:18px;
+
       font-size:1.05rem;
+
     }
 
     /* TEAM */
 
     .team-member{
+
       background:white;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 8px 20px rgba(0,0,0,.07);
+
+      border-radius:22px;
+
+      padding:35px;
+
+      text-align:center;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.06);
+
       transition:.3s;
+
       height:100%;
+
     }
 
     .team-member:hover{
+
       transform:translateY(-6px);
+
     }
 
     .team-member img{
-      width:120px;
-      height:120px;
+
+      width:130px;
+      height:130px;
+
       border-radius:50%;
+
       object-fit:cover;
-      margin-bottom:20px;
+
       border:4px solid var(--primary);
+
+      margin-bottom:20px;
+
     }
 
     /* GALLERY */
 
-    .gallery img{
-      border-radius:15px;
-      transition:.3s;
-      height:250px;
-      object-fit:cover;
+    .gallery-img{
+
       width:100%;
+      height:250px;
+
+      object-fit:cover;
+
+      border-radius:18px;
+
+      transition:.35s;
+
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+
     }
 
-    .gallery img:hover{
+    .gallery-img:hover{
+
       transform:scale(1.03);
+
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    }
+
+    /* PARTNERS */
+
+    .partner-logo{
+
+      max-height:90px;
+
+      object-fit:contain;
+
+      filter:grayscale(100%);
+
+      opacity:.8;
+
+      transition:.35s;
+
+    }
+
+    .partner-logo:hover{
+
+      filter:grayscale(0);
+
+      opacity:1;
+
+      transform:scale(1.06);
+
+    }
+
+    /* DONATION */
+
+    .donation-card{
+
+      background:white;
+
+      border-radius:25px;
+
+      padding:50px;
+
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+
     }
 
     /* CONTACT */
 
     .contact-box{
+
       background:white;
+
       padding:50px;
-      border-radius:20px;
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+      border-radius:25px;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+
     }
 
     .form-control{
+
+      border-radius:14px;
+
       padding:14px;
-      border-radius:12px;
+
     }
 
     textarea{
+
       resize:none;
+
     }
 
     /* FOOTER */
 
     footer{
+
       background:var(--dark);
+
       color:white;
-      padding:40px 0;
+
+      padding:50px 0;
+
     }
 
     footer a{
+
       color:white;
+
       text-decoration:none;
-      margin:0 10px;
+
+      margin:0 12px;
+
       transition:.3s;
+
     }
 
     footer a:hover{
+
       color:var(--secondary);
+
+    }
+
+    /* DONATE FLOAT */
+
+    .floating-donate{
+
+      position:fixed;
+
+      bottom:20px;
+      right:20px;
+
+      z-index:9999;
+
+      border-radius:50px;
+
+      padding:14px 22px;
+
+      font-weight:600;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+
     }
 
     /* RESPONSIVE */
@@ -259,27 +479,40 @@
     @media(max-width:768px){
 
       .hero-overlay h1{
-        font-size:2.2rem;
+
+        font-size:2.3rem;
+
       }
 
       .hero-overlay p{
+
         font-size:1rem;
+
       }
 
       .carousel-item img{
-        height:70vh;
+
+        height:80vh;
+
       }
 
       section{
-        padding:70px 0;
+
+        padding:80px 0;
+
       }
 
-      .contact-box{
+      .contact-box,
+      .donation-card{
+
         padding:30px;
+
       }
+
     }
 
   </style>
+
 </head>
 
 <body>
@@ -287,16 +520,25 @@
 <!-- NAVBAR -->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="logo.jpg" alt="Logo ONG" loading="lazy">
+    <a class="navbar-brand d-flex align-items-center"
+       href="#">
+
+      <img src="logo.jpg"
+           alt="Logo ONG">
+
       <span class="ms-3 fw-semibold text-white">
+
         Asociația Oameni pentru Oameni - Aiud
+
       </span>
+
     </a>
 
-    <button class="navbar-toggler" type="button"
+    <button class="navbar-toggler"
+            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav">
 
@@ -304,7 +546,8 @@
 
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse"
+         id="navbarNav">
 
       <ul class="navbar-nav ms-auto">
 
@@ -325,11 +568,15 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#echipa">Echipă</a>
+          <a class="nav-link" href="#parteneri">Parteneri</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="#galerie">Galerie</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#donatii">Donații</a>
         </li>
 
         <li class="nav-item">
@@ -341,26 +588,41 @@
     </div>
 
   </div>
+
 </nav>
 
 <!-- HERO -->
 
 <header>
 
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div id="heroCarousel"
+       class="carousel slide carousel-fade"
+       data-bs-ride="carousel">
 
     <div class="carousel-inner">
 
       <div class="carousel-item active">
-        <img src="images/hero1.jpg" class="d-block w-100" alt="Hero 1" loading="lazy">
+
+        <img src="images/hero1.jpg"
+             class="d-block w-100"
+             alt="Hero 1">
+
       </div>
 
       <div class="carousel-item">
-        <img src="images/hero2.jpg" class="d-block w-100" alt="Hero 2" loading="lazy">
+
+        <img src="images/hero2.jpg"
+             class="d-block w-100"
+             alt="Hero 2">
+
       </div>
 
       <div class="carousel-item">
-        <img src="images/hero3.jpg" class="d-block w-100" alt="Hero 3" loading="lazy">
+
+        <img src="images/hero3.jpg"
+             class="d-block w-100"
+             alt="Hero 3">
+
       </div>
 
     </div>
@@ -368,14 +630,19 @@
     <div class="hero-overlay">
 
       <h1 data-aos="fade-up">
+
         Împreună construim binele
+
       </h1>
 
-      <p data-aos="fade-up" data-aos-delay="150">
+      <p data-aos="fade-up"
+         data-aos-delay="150">
+
         Susținem Spitalul Municipal Aiud și pacienții oncologici.
+
       </p>
 
-      <a href="#contact"
+      <a href="#donatii"
          class="btn-main"
          data-aos="zoom-in"
          data-aos-delay="300">
@@ -396,40 +663,53 @@
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Despre Noi
+
     </h2>
 
-    <p class="section-subtitle" data-aos="fade-up">
-      O inițiativă pornită din solidaritate și responsabilitate față de comunitate.
+    <p class="section-subtitle"
+       data-aos="fade-up">
+
+      O inițiativă construită din solidaritate și responsabilitate.
+
     </p>
 
     <div class="row align-items-center g-5">
 
-      <div class="col-lg-6" data-aos="fade-right">
+      <div class="col-lg-6"
+           data-aos="fade-right">
 
         <img src="images/about.jpg"
              class="img-fluid rounded-4 shadow"
-             alt="Despre ONG"
-             loading="lazy">
+             alt="Despre ONG">
 
       </div>
 
-      <div class="col-lg-6" data-aos="fade-left">
+      <div class="col-lg-6"
+           data-aos="fade-left">
 
         <p class="mb-4">
-          Asociația Oameni pentru Oameni - Aiud a luat naștere la inițiativa
-          unor profesioniști din cadrul Spitalului Municipal Aiud.
+
+          Asociația Oameni pentru Oameni - Aiud a fost fondată
+          de profesioniști implicați în sistemul medical local.
+
         </p>
 
         <p class="mb-4">
-          Scopul nostru este dezvoltarea și modernizarea serviciilor medicale,
-          susținerea pacienților și crearea unei comunități unite în jurul sănătății.
+
+          Misiunea noastră este dezvoltarea serviciilor medicale,
+          sprijinirea pacienților și modernizarea infrastructurii medicale.
+
         </p>
 
         <p>
-          Credem că fiecare persoană merită acces la îngrijire medicală
-          de calitate, aproape de casă.
+
+          Credem într-o comunitate unită și într-un acces mai bun
+          la tratamente moderne și servicii medicale de calitate.
+
         </p>
 
       </div>
@@ -442,19 +722,27 @@
 
 <!-- MISIUNE -->
 
-<section id="misiune" class="bg-white">
+<section id="misiune"
+         class="bg-white">
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Misiunea Noastră
+
     </h2>
 
-    <p class="section-subtitle" data-aos="fade-up">
+    <p class="section-subtitle"
+       data-aos="fade-up">
+
       Construim un sistem medical mai accesibil și mai modern.
+
     </p>
 
-    <div class="mission-box" data-aos="zoom-in">
+    <div class="mission-box"
+         data-aos="zoom-in">
 
       <ul class="list-unstyled">
 
@@ -465,17 +753,17 @@
 
         <li>
           <i class="bi bi-check-circle-fill text-success me-2"></i>
-          Dotarea spitalului cu echipamente moderne
-        </li>
-
-        <li>
-          <i class="bi bi-check-circle-fill text-success me-2"></i>
           Dezvoltarea secției de oncologie
         </li>
 
         <li>
           <i class="bi bi-check-circle-fill text-success me-2"></i>
-          Campanii de prevenție și educație pentru sănătate
+          Dotări medicale moderne
+        </li>
+
+        <li>
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          Campanii de educație și prevenție
         </li>
 
       </ul>
@@ -492,45 +780,60 @@
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Proiecte
+
     </h2>
 
-    <p class="section-subtitle" data-aos="fade-up">
-      Inițiative concrete pentru sănătatea comunității.
+    <p class="section-subtitle"
+       data-aos="fade-up">
+
+      Inițiative dedicate sănătății comunității.
+
     </p>
 
     <div class="row g-4">
 
       <!-- CARD 1 -->
 
-      <div class="col-lg-4" data-aos="fade-up">
+      <div class="col-lg-4"
+           data-aos="fade-up">
 
         <div class="card">
 
           <img src="images/proj1.jpg"
-               alt="Oncologie"
-               loading="lazy">
+               alt="Oncologie">
 
           <div class="card-body">
 
             <h4 class="text-success mb-3">
+
               Spitalizare de zi - Oncologie
+
             </h4>
 
             <p>
-              Proiect dedicat înființării unei secții moderne
-              de oncologie medicală în cadrul Spitalului Municipal Aiud.
+
+              Înființarea unei secții moderne de oncologie
+              medicală pentru pacienții din Aiud și împrejurimi.
+
             </p>
 
             <ul>
+
               <li>6 fotolii chimioterapie</li>
-              <li>Reducerea deplasărilor</li>
-              <li>Acces rapid la tratament</li>
+              <li>Reducerea timpilor de așteptare</li>
+              <li>Acces local la tratament</li>
+
             </ul>
 
             <p class="fw-bold mt-3">
-              Investiție estimată: 800.000 lei
+
+              Investiție estimată:
+              800.000 lei
+
             </p>
 
           </div>
@@ -541,23 +844,28 @@
 
       <!-- CARD 2 -->
 
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+      <div class="col-lg-4"
+           data-aos="fade-up"
+           data-aos-delay="150">
 
         <div class="card">
 
           <img src="images/proj2.jpg"
-               alt="Dotări"
-               loading="lazy">
+               alt="Dotări">
 
           <div class="card-body">
 
             <h4 class="text-success mb-3">
+
               Dotări Medicale
+
             </h4>
 
             <p>
-              Colectăm fonduri pentru echipamente și aparatură medicală modernă,
-              necesare dezvoltării serviciilor medicale.
+
+              Colectăm fonduri pentru echipamente moderne
+              și aparatură medicală performantă.
+
             </p>
 
           </div>
@@ -568,23 +876,28 @@
 
       <!-- CARD 3 -->
 
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-lg-4"
+           data-aos="fade-up"
+           data-aos-delay="300">
 
         <div class="card">
 
           <img src="images/proj3.jpg"
-               alt="Educație"
-               loading="lazy">
+               alt="Educație">
 
           <div class="card-body">
 
             <h4 class="text-success mb-3">
+
               Educație pentru Sănătate
+
             </h4>
 
             <p>
-              Organizăm campanii și programe de informare
-              pentru prevenție și sănătate în comunitate.
+
+              Organizăm campanii și programe dedicate
+              prevenirii și informării medicale.
+
             </p>
 
           </div>
@@ -601,32 +914,44 @@
 
 <!-- EVENIMENTE -->
 
-<section id="evenimente" class="bg-white">
+<section id="evenimente"
+         class="bg-white">
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Evenimente
+
     </h2>
 
     <div class="row g-4">
 
-      <div class="col-md-6" data-aos="fade-right">
+      <div class="col-md-6"
+           data-aos="fade-right">
 
         <div class="card">
 
           <div class="card-body">
 
             <h4 class="text-success">
+
               Aiud Green Run by DP World
+
             </h4>
 
             <p class="text-muted">
+
               13 Septembrie 2025
+
             </p>
 
             <p>
-              Eveniment caritabil pentru sprijinirea pacienților oncologici.
+
+              Eveniment caritabil dedicat sprijinirii
+              pacienților oncologici.
+
             </p>
 
           </div>
@@ -635,22 +960,29 @@
 
       </div>
 
-      <div class="col-md-6" data-aos="fade-left">
+      <div class="col-md-6"
+           data-aos="fade-left">
 
         <div class="card">
 
           <div class="card-body">
 
             <h4 class="text-success">
+
               Concert Caritabil de Colinde
+
             </h4>
 
             <p class="text-muted">
+
               12 Decembrie 2025
+
             </p>
 
             <p>
-              Un eveniment dedicat solidarității și sprijinului comunitar.
+
+              O seară dedicată solidarității și sprijinului comunitar.
+
             </p>
 
           </div>
@@ -665,75 +997,78 @@
 
 </section>
 
-<!-- ECHIPA -->
+<!-- PARTENERI -->
 
-<section id="echipa">
+<section id="parteneri">
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
-      Echipa Noastră
+    <h2 class="section-title"
+        data-aos="fade-up">
+
+      Parteneri & Sponsori
+
     </h2>
 
-    <div class="row g-4">
+    <p class="section-subtitle"
+       data-aos="fade-up">
 
-      <div class="col-md-4" data-aos="zoom-in">
+      Împreună construim un viitor mai bun pentru comunitate.
 
-        <div class="team-member text-center">
+    </p>
 
-          <img src="camelia-popa.jpg"
-               alt="Camelia Popa"
-               loading="lazy">
+    <div class="row justify-content-center align-items-center g-5">
 
-          <h5>
-            Farm. Camelia-Maria Popa
-          </h5>
+      <div class="col-lg-2 col-md-3 col-6 text-center"
+           data-aos="zoom-in">
 
-          <p class="text-muted">
-            Președinte
-          </p>
+        <a href="https://www.raiffeisen.ro/"
+           target="_blank">
 
-        </div>
+          <img src="images/raiffeisen.png"
+               class="img-fluid partner-logo"
+               alt="Raiffeisen">
 
-      </div>
-
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-
-        <div class="team-member text-center">
-
-          <img src="IMG_4629.jpeg"
-               alt="Raluca Stanciu"
-               loading="lazy">
-
-          <h5>
-            Dr. Raluca-Ana Stanciu
-          </h5>
-
-          <p class="text-muted">
-            Vicepreședinte
-          </p>
-
-        </div>
+        </a>
 
       </div>
 
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="col-lg-2 col-md-3 col-6 text-center"
+           data-aos="zoom-in">
 
-        <div class="team-member text-center">
+        <a href="#">
 
-          <img src="images/corina-tordai.jpg"
-               alt="Corina"
-               loading="lazy">
+          <img src="images/partner2.png"
+               class="img-fluid partner-logo"
+               alt="Partener">
 
-          <h5>
-            Corina-Dalia Tordai
-          </h5>
+        </a>
 
-          <p class="text-muted">
-            Secretar
-          </p>
+      </div>
 
-        </div>
+      <div class="col-lg-2 col-md-3 col-6 text-center"
+           data-aos="zoom-in">
+
+        <a href="#">
+
+          <img src="images/partner3.png"
+               class="img-fluid partner-logo"
+               alt="Partener">
+
+        </a>
+
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6 text-center"
+           data-aos="zoom-in">
+
+        <a href="#">
+
+          <img src="images/partner4.png"
+               class="img-fluid partner-logo"
+               alt="Partener">
+
+        </a>
 
       </div>
 
@@ -745,30 +1080,81 @@
 
 <!-- GALERIE -->
 
-<section id="galerie" class="bg-white">
+<section id="galerie"
+         class="bg-white">
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Galerie Foto
+
     </h2>
 
-    <div class="row g-4 gallery">
+    <p class="section-subtitle"
+       data-aos="fade-up">
 
-      <div class="col-md-3 col-6">
-        <img src="images/gal1.jpg" alt="" loading="lazy">
+      Momente din activitatea și proiectele noastre.
+
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-4 col-6"
+           data-aos="zoom-in">
+
+        <a href="images/gal1.jpg"
+           class="glightbox">
+
+          <img src="images/gal1.jpg"
+               class="gallery-img"
+               alt="Galerie 1">
+
+        </a>
+
       </div>
 
-      <div class="col-md-3 col-6">
-        <img src="images/gal2.jpg" alt="" loading="lazy">
+      <div class="col-lg-3 col-md-4 col-6"
+           data-aos="zoom-in">
+
+        <a href="images/gal2.jpg"
+           class="glightbox">
+
+          <img src="images/gal2.jpg"
+               class="gallery-img"
+               alt="Galerie 2">
+
+        </a>
+
       </div>
 
-      <div class="col-md-3 col-6">
-        <img src="images/gal3.jpg" alt="" loading="lazy">
+      <div class="col-lg-3 col-md-4 col-6"
+           data-aos="zoom-in">
+
+        <a href="images/gal3.jpg"
+           class="glightbox">
+
+          <img src="images/gal3.jpg"
+               class="gallery-img"
+               alt="Galerie 3">
+
+        </a>
+
       </div>
 
-      <div class="col-md-3 col-6">
-        <img src="images/gal4.jpg" alt="" loading="lazy">
+      <div class="col-lg-3 col-md-4 col-6"
+           data-aos="zoom-in">
+
+        <a href="images/gal4.jpg"
+           class="glightbox">
+
+          <img src="images/gal4.jpg"
+               class="gallery-img"
+               alt="Galerie 4">
+
+        </a>
+
       </div>
 
     </div>
@@ -777,27 +1163,133 @@
 
 </section>
 
-<!-- REDIRECTIONARE -->
+<!-- DONATII -->
 
-<section class="text-center">
+<section id="donatii">
 
-  <div class="container" data-aos="zoom-in">
+  <div class="container">
 
-    <h2 class="section-title">
-      Redirecționează 3,5%
+    <h2 class="section-title"
+        data-aos="fade-up">
+
+      Susține Cauza Noastră
+
     </h2>
 
-    <p class="mb-4">
-      Susține activitatea noastră fără costuri suplimentare.
+    <p class="section-subtitle"
+       data-aos="fade-up">
+
+      Fiecare donație contribuie la sprijinirea pacienților.
+
     </p>
 
-    <a href="https://formular230.ro/asociatia-oameni-pentru-oameni-aiud"
-       target="_blank"
-       class="btn-main">
+    <div class="row justify-content-center">
 
-       Completează Formularul 230
+      <div class="col-lg-8">
 
-    </a>
+        <div class="donation-card"
+             data-aos="zoom-in">
+
+          <div class="text-center mb-4">
+
+            <i class="bi bi-heart-fill text-danger"
+               style="font-size:60px;"></i>
+
+          </div>
+
+          <h3 class="text-center text-success mb-4">
+
+            Donație prin transfer bancar
+
+          </h3>
+
+          <div class="bg-light rounded-4 p-4 mb-4">
+
+            <div class="mb-4">
+
+              <small class="text-muted d-block">
+
+                Beneficiar
+
+              </small>
+
+              <strong>
+
+                Asociația Oameni pentru Oameni-Aiud
+
+              </strong>
+
+            </div>
+
+            <div class="mb-4">
+
+              <small class="text-muted d-block">
+
+                Bancă
+
+              </small>
+
+              <strong>
+
+                Raiffeisen Bank
+
+              </strong>
+
+            </div>
+
+            <div>
+
+              <small class="text-muted d-block">
+
+                IBAN
+
+              </small>
+
+              <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center">
+
+                <strong id="ibanText"
+                        class="fs-5 text-break">
+
+                  RO28 RZBR 0000 0600 2841 3323
+
+                </strong>
+
+                <button class="btn btn-success rounded-pill px-4"
+                        onclick="copyIBAN()">
+
+                  <i class="bi bi-copy"></i>
+                  Copiază
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="text-center">
+
+            <p class="mb-4">
+
+              Îți mulțumim pentru sprijinul oferit comunității.
+
+            </p>
+
+            <a href="#contact"
+               class="btn-main">
+
+               Contactează-ne
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -805,17 +1297,22 @@
 
 <!-- CONTACT -->
 
-<section id="contact" class="bg-white">
+<section id="contact"
+         class="bg-white">
 
   <div class="container">
 
-    <h2 class="section-title" data-aos="fade-up">
+    <h2 class="section-title"
+        data-aos="fade-up">
+
       Contact
+
     </h2>
 
-    <div class="contact-box" data-aos="fade-up">
+    <div class="contact-box"
+         data-aos="fade-up">
 
-      <form action="https://formsubmit.co/contact@oamenipentruoameni-aiud.ro"
+      <form action="https://formsubmit.co/oamenipentruoameniaiud@gmail.com"
             method="POST">
 
         <div class="row g-4">
@@ -850,7 +1347,9 @@
           <div class="col-12 text-center">
 
             <button class="btn-main border-0">
+
               Trimite Mesajul
+
             </button>
 
           </div>
@@ -872,48 +1371,65 @@
   <div class="container text-center">
 
     <h5 class="mb-3">
+
       Asociația Oameni pentru Oameni - Aiud
+
     </h5>
 
-    <p>
-      Sprijinim sănătatea comunității și dezvoltarea serviciilor medicale.
+    <p class="mb-4">
+
+      Împreună pentru sănătatea comunității.
+
     </p>
 
-    <div class="my-4">
+    <div class="mb-4">
 
-      <a href="https://www.facebook.com/share/14RqxWdsMz4/?mibextid=wwXIfr" target="_blank">
+      <a href="https://www.facebook.com/?locale=ro_RO"
+         target="_blank">
+
         <i class="bi bi-facebook"></i>
+
       </a>
 
-      <a href="https://www.instagram.com/oamenipentruoameniaiud" target="_blank">
+      <a href="https://www.instagram.com/oamenipentruoameniaiud"
+         target="_blank">
+
         <i class="bi bi-instagram"></i>
+
       </a>
 
-      <a href="https://www.linkedin.com/company/asociatia-oameni-pentru-oameni-aiud/" target="_blank">
+      <a href="https://www.linkedin.com/company/asociatia-oameni-pentru-oameni-aiud/"
+         target="_blank">
+
         <i class="bi bi-linkedin"></i>
+
       </a>
 
     </div>
 
     <p class="mb-1">
-      contact@oamenipentruoameni-aiud.ro
+
+      oamenipentruoameniaiud@gmail.com
+
     </p>
 
     <p class="mb-0">
-      © 2025 Toate drepturile rezervate
+
+      © 2026 Toate drepturile rezervate
+
     </p>
 
   </div>
 
 </footer>
 
-<!-- DONATE BUTTON FIXED -->
+<!-- DONATE BUTTON -->
 
-<a href="#contact"
-   class="btn btn-warning rounded-pill shadow position-fixed"
-   style="bottom:20px;right:20px;z-index:9999;padding:12px 20px;font-weight:600;">
+<a href="#donatii"
+   class="btn btn-warning floating-donate">
 
-   <i class="bi bi-heart-fill"></i> Donează
+   <i class="bi bi-heart-fill"></i>
+   Donează
 
 </a>
 
@@ -923,12 +1439,67 @@
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
 <script>
+
+  /* AOS */
+
   AOS.init({
+
     duration:900,
     once:true
+
   });
+
+  /* GALLERY */
+
+  const lightbox = GLightbox({
+
+    touchNavigation:true,
+    loop:true
+
+  });
+
+  /* COPY IBAN */
+
+  function copyIBAN(){
+
+    const iban =
+      "RO28 RZBR 0000 0600 2841 3323";
+
+    navigator.clipboard.writeText(iban);
+
+    alert("IBAN copiat cu succes!");
+
+  }
+
+  /* CLOSE MOBILE MENU */
+
+  document
+    .querySelectorAll('.navbar-nav .nav-link')
+    .forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        const navbarCollapse =
+          document.querySelector('.navbar-collapse');
+
+        const bsCollapse =
+          bootstrap.Collapse.getInstance(navbarCollapse);
+
+        if(bsCollapse){
+
+          bsCollapse.hide();
+
+        }
+
+      });
+
+    });
+
 </script>
 
 </body>
+
 </html>
